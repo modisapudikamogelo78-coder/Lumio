@@ -1,0 +1,40 @@
+{
+  "name": "ADHDTask",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "bucket": {
+      "type": "string",
+      "enum": [
+        "today",
+        "later",
+        "someday"
+      ],
+      "default": "today"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    },
+    "completed_at": {
+      "type": "string"
+    },
+    "priority_score": {
+      "type": "number",
+      "description": "AI-assigned priority 1-10"
+    },
+    "ai_selected": {
+      "type": "boolean",
+      "default": false,
+      "description": "AI picked this for today"
+    }
+  },
+  "required": [
+    "title"
+  ]
+}

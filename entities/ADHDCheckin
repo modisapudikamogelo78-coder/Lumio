@@ -1,0 +1,36 @@
+{
+  "name": "ADHDCheckin",
+  "type": "object",
+  "properties": {
+    "energy": {
+      "type": "number",
+      "description": "1-5 energy level"
+    },
+    "mood": {
+      "type": "string",
+      "enum": [
+        "great",
+        "good",
+        "okay",
+        "low",
+        "rough"
+      ]
+    },
+    "note": {
+      "type": "string"
+    },
+    "session_type": {
+      "type": "string",
+      "enum": [
+        "morning",
+        "midday",
+        "evening",
+        "reflection"
+      ]
+    }
+  },
+  "required": [
+    "energy",
+    "mood"
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "MathProgress",
+  "type": "object",
+  "properties": {
+    "topic": {
+      "type": "string",
+      "enum": [
+        "number_sense",
+        "addition",
+        "subtraction",
+        "multiplication",
+        "division",
+        "fractions",
+        "decimals",
+        "measurement",
+        "money",
+        "time"
+      ],
+      "description": "Math topic"
+    },
+    "mastery_level": {
+      "type": "number",
+      "description": "Mastery percentage 0-100"
+    },
+    "current_difficulty": {
+      "type": "number",
+      "description": "Current difficulty level 1-10"
+    },
+    "total_problems_attempted": {
+      "type": "number",
+      "default": 0
+    },
+    "total_correct": {
+      "type": "number",
+      "default": 0
+    },
+    "struggles": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Identified struggle areas"
+    },
+    "preferred_context": {
+      "type": "string",
+      "enum": [
+        "cooking",
+        "shopping",
+        "gaming",
+        "budgeting",
+        "sports"
+      ],
+      "description": "Preferred real-world context"
+    },
+    "last_review_date": {
+      "type": "string",
+      "description": "For spaced repetition tracking"
+    }
+  },
+  "required": [
+    "topic"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "name": "LearningSession",
+  "type": "object",
+  "properties": {
+    "module": {
+      "type": "string",
+      "enum": [
+        "dyslexia",
+        "dyscalculia"
+      ],
+      "description": "Which learning module this session belongs to"
+    },
+    "session_type": {
+      "type": "string",
+      "enum": [
+        "text_visual",
+        "math_practice",
+        "diagnostic",
+        "real_world"
+      ],
+      "description": "Type of learning activity"
+    },
+    "original_text": {
+      "type": "string",
+      "description": "Original text extracted from uploaded image"
+    },
+    "simplified_text": {
+      "type": "string",
+      "description": "Simplified version of the text"
+    },
+    "generated_images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs of generated visual content"
+    },
+    "image_descriptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Descriptions of each generated image"
+    },
+    "score": {
+      "type": "number",
+      "description": "Score for math sessions"
+    },
+    "difficulty_level": {
+      "type": "number",
+      "description": "Difficulty level 1-10"
+    },
+    "topic": {
+      "type": "string",
+      "description": "Math topic covered"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "module",
+    "session_type"
+  ]
+}
